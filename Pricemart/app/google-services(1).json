@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "389369674598",
+    "firebase_url": "https://pricemart-76572.firebaseio.com",
+    "project_id": "pricemart-76572",
+    "storage_bucket": "pricemart-76572.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389369674598:android:ab274a9e34031114",
+        "android_client_info": {
+          "package_name": "com.example.simasingh.pricemart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389369674598-60mhlumf9t2sft41go9di2rg589taodi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.simasingh.pricemart",
+            "certificate_hash": "1963BC0D049CD81614DCAAFDE845A03301439086"
+          }
+        },
+        {
+          "client_id": "389369674598-pdfp6tnb90tjkm0pvl4h010ul4ucfttt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPPFBBe9dBLLGdwjz_GuhVSf71KwLbI6c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389369674598-pdfp6tnb90tjkm0pvl4h010ul4ucfttt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
