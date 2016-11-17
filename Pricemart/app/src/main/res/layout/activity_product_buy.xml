@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     >
 
     <ScrollView
@@ -19,7 +20,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/layout1"
             android:orientation="vertical">
 
@@ -29,8 +30,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="300dp"
-                    android:layout_height="300dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/buy"
                     android:layout_gravity="center"
                     android:id="@+id/product_image" />
@@ -40,22 +41,20 @@
                     android:layout_height="match_parent"
                     android:layout_below="@id/product_image"
                     android:id="@+id/product_name"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:text="Product name"
-                    android:textSize="40dp"
-                    android:layout_gravity="center_horizontal"/>
+                    android:textSize="15dp" />
+
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:text="Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/product_name"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:textSize="30dp"
                     android:gravity="center"
-                    android:layout_marginBottom="80dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginLeft="36dp"
-                    android:layout_marginStart="36dp"
                     android:id="@+id/product_price" />
 
             </LinearLayout>
@@ -64,11 +63,11 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/button"
+        android:layout_height="60dp"
+        android:backgroundTint="#FF8C00"
+        android:id="@+id/add_to_cart"
         android:layout_alignParentBottom="true"
-        android:text="Buy"
-        />
-
+        android:textSize="20dp"
+        android:text="buy product" />
 
 </RelativeLayout>

@@ -10,6 +10,7 @@
         android:id="@+id/id_index_gallery_item_image"
         android:scaleType="centerCrop"
         android:onClick="onClick"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/common_google_signin_btn_text_dark"/>
 
 </LinearLayout>

@@ -1,7 +1,9 @@
 package com.example.simasingh.pricemart;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -10,6 +12,7 @@ import java.util.List;
 
 public class Electronics extends AppCompatActivity {
 
+    private Intent i;
     ExpandableListView expandableListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +45,43 @@ public class Electronics extends AppCompatActivity {
         ChildList.put(Headings.get(2), LargeAppliances);
         ElectronicsListview electronicsListview = new ElectronicsListview(this, Headings, ChildList);
         expandableListView.setAdapter(electronicsListview);
+        i = new Intent(Electronics.this, DisplayMenShoe.class);
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                switch(groupPosition){
+                    case 0: switch(childPosition){
+                        case 0: i.putExtra("key","http://10.86.0.101/simar/mobiledetails.php");
+                            startActivity(i);break;
+                        case 1: i.putExtra("key","http://10.86.0.101/simar/pbdetails.php");
+                            startActivity(i);break;
+                        case 2: i.putExtra("key","http://10.86.0.101/simar/hpdetails.php");
+                            startActivity(i);break;
+                        case 3: i.putExtra("key","http://10.86.0.101/simar/casedetails.php");
+                            startActivity(i);break;
+                    }
+                        break;
+
+                    case 1: switch(childPosition){
+                        case 0: i.putExtra("key","http://10.86.0.101/simar/hddetails.php");
+                            startActivity(i);break;
+                        case 1: i.putExtra("key","http://10.86.0.101/simar/pddetails.php");
+                            startActivity(i);break;
+                        case 2: i.putExtra("key","http://10.86.0.101/simar/printerdetails.php");
+                            startActivity(i);break;
+                    }
+                        break;
+
+                    case 2: switch(childPosition){
+                        case 0: i.putExtra("key","http://10.86.0.101/simar/acdetails.php");
+                            startActivity(i);break;
+                        case 1: i.putExtra("key","http://10.86.0.101/simar/rgdetails.php");
+                            startActivity(i);break;
+                    }
+                        break;
+                }
+                return false;
+            }
+        });
     }
 }

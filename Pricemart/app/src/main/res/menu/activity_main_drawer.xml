@@ -17,9 +17,9 @@
             android:title="@string/books" />
 
         <item
-            android:id="@+id/settings"
+            android:id="@+id/logout"
             android:icon="@drawable/settings"
-            android:title="@string/action_settings"/>
+            android:title="Logout"/>
     </group>
 
 </menu>

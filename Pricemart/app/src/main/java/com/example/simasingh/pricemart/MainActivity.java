@@ -69,11 +69,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        new OfferTask().execute();
-    }
-
-    private void initData() {
-
+        new OfferTask().execute("http://10.86.0.101/simar/offers.php");
     }
 
     @Override
@@ -131,8 +127,10 @@ public class MainActivity extends AppCompatActivity
             Intent electronics = new Intent(MainActivity.this, Electronics.class);
             startActivity(electronics);
         } else if (id == R.id.books) {
-
-        } else if (id == R.id.settings) {
+            Intent books = new Intent(MainActivity.this, DisplayMenShoe.class);
+            books.putExtra("key","http://10.86.0.101/simar/bookdetails.php");
+            startActivity(books);
+        } else if (id == R.id.logout) {
 
         }
 
@@ -141,10 +139,10 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public class OfferTask extends AsyncTask<Object, Void, String[]>{
+    public class OfferTask extends AsyncTask<String, Void, String[]>{
 
         @Override
-        protected String[] doInBackground(Object[] params) {
+        protected String[] doInBackground(String[] params) {
             HttpURLConnection httpURLConnection;
             try{
                 URL url = new URL(params[0]);
@@ -168,8 +166,8 @@ public class MainActivity extends AppCompatActivity
                     JSONObject jsonObject1 = jsonArray.getJSONObject(count);
                     count++;
                     offer = new Offer();
-                    offer.setUrl(jsonObject1.getString("url"));
-                    urls[count2] = new String(offer.getUrl());
+                    offer.setUrl(jsonObject1.getString("image"));
+                    urls[count2++] = new String(offer.getUrl());
                 }
                 return urls;
             }catch (Exception e){
@@ -182,13 +180,14 @@ public class MainActivity extends AppCompatActivity
         protected void onPostExecute(String[] o) {
             super.onPostExecute(o);
             mGallery = (LinearLayout) findViewById(R.id.id_gallery);
+            mInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
             View view;
             int i;
             for (i = 0; i < o.length; i++) {
                 view = mInflater.inflate(R.layout.offers, mGallery, false);
                 img = (ImageView) view.findViewById(R.id.id_index_gallery_item_image);
                 ImageLoader.getInstance().displayImage(o[i], img);
-
+                mGallery.addView(view);
                 final int finalI = i;
                 img.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -196,7 +195,6 @@ public class MainActivity extends AppCompatActivity
                         imageClicked(finalI);
                     }
                 });
-                mGallery.addView(view);
             }
         }
     }

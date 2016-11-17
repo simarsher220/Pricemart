@@ -53,25 +53,25 @@ public class Lifestyle1 extends AppCompatActivity {
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 switch(groupPosition){
                     case 0: switch(childPosition){
-                        case 0: i.putExtra("key","http://10.86.5.224/simar/mcdetails.php");
+                        case 0: i.putExtra("key","http://10.86.0.101/simar/mcdetails.php");
                             startActivity(i);break;
-                        case 1: i.putExtra("key","http://10.86.5.224/simar/mfdetails.php");
+                        case 1: i.putExtra("key","http://10.86.0.101/simar/mfdetails.php");
                             startActivity(i);break;
                     }
                         break;
 
                     case 1: switch(childPosition){
-                        case 0: i.putExtra("key","http://10.86.5.224/simar/wcdetails.php");
+                        case 0: i.putExtra("key","http://10.86.0.101/simar/wcdetails.php");
                             startActivity(i);break;
-                        case 1: i.putExtra("key","http://10.86.5.224/simar/wfdetails.php");
+                        case 1: i.putExtra("key","http://10.86.0.101/simar/wfdetails.php");
                             startActivity(i);break;
                     }
                         break;
 
                     case 2: switch(childPosition){
-                        case 0: i.putExtra("key","http://10.86.5.224/simar/ccdetails.php");
+                        case 0: i.putExtra("key","http://10.86.0.101/simar/ccdetails.php");
                             startActivity(i);break;
-                        case 1: i.putExtra("key","http://10.86.5.224/simar/ctdetails.php");
+                        case 1: i.putExtra("key","http://10.86.0.101/simar/ctdetails.php");
                             startActivity(i);break;
                     }
                         break;
