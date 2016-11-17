@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.simasingh.pricemart.BankActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simar Singh"
+        android:id="@+id/user"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/user"
+        android:hint="enter address"
+        android:id="@+id/address"
+        android:layout_marginTop="20dp"
+        android:maxLines="3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address"
+        android:id="@+id/quantity_label"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Quantity"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/quantity"
+        android:id="@+id/quantityno"
+        android:layout_below="@+id/quantity_label"
+        android:layout_marginTop="20dp">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/quantityno"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quantityno"
+        android:id="@+id/payment_label"
+        android:layout_marginTop="50dp"
+        android:text="Select mode of payment"
+        android:textSize="25dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/paymentlist"
+        android:id="@+id/payment_method"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/payment_label">
+    </Spinner>
+
+</RelativeLayout>

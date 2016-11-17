@@ -100,10 +100,11 @@ public class DisplayMenShoe extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     MenShoe menShoe  = (MenShoe) listView.getItemAtPosition(position);
-                    Intent i = new Intent(DisplayMenShoe.this, DisplayFull.class);
+                    Intent i = new Intent(DisplayMenShoe.this, ProductBuy.class);
                     i.putExtra("url", menShoe.getImage());
                     i.putExtra("name", menShoe.getName());
                     i.putExtra("price", menShoe.getPrice());
+                    startActivity(i);
                 }
             });
         }
