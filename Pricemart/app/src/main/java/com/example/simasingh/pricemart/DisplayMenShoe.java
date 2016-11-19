@@ -73,7 +73,7 @@ public class DisplayMenShoe extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject(stringBuilder.toString());
                 JSONArray jsonArray = jsonObject.getJSONArray("server_response");
                 int count = 0;
-                MenShoe menShoe = null;
+                MenShoe menShoe;
                 while(count < jsonArray.length()){
                     JSONObject jsonObject1 = jsonArray.getJSONObject(count);
                     count++;

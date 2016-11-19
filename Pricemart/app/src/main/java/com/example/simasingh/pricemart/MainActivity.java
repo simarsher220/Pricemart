@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        new OfferTask().execute("http://10.86.0.101/simar/offers.php");
+        new OfferTask().execute("http://10.86.1.190/offers.php");
     }
 
     @Override
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(electronics);
         } else if (id == R.id.books) {
             Intent books = new Intent(MainActivity.this, DisplayMenShoe.class);
-            books.putExtra("key","http://10.86.0.101/simar/bookdetails.php");
+            books.putExtra("key","http://10.86.1.190/bookdetails.php");
             startActivity(books);
         } else if (id == R.id.logout) {
 

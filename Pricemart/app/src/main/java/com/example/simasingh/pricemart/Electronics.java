@@ -51,31 +51,31 @@ public class Electronics extends AppCompatActivity {
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 switch(groupPosition){
                     case 0: switch(childPosition){
-                        case 0: i.putExtra("key","http://10.86.0.101/simar/mobiledetails.php");
+                        case 0: i.putExtra("key","http://10.86.1.190/mobiledetails.php");
                             startActivity(i);break;
-                        case 1: i.putExtra("key","http://10.86.0.101/simar/pbdetails.php");
+                        case 1: i.putExtra("key","http://10.86.1.190/pbdetails.php");
                             startActivity(i);break;
-                        case 2: i.putExtra("key","http://10.86.0.101/simar/hpdetails.php");
+                        case 2: i.putExtra("key","http://10.86.1.190/hpdetails.php");
                             startActivity(i);break;
-                        case 3: i.putExtra("key","http://10.86.0.101/simar/casedetails.php");
+                        case 3: i.putExtra("key","http://10.86.1.190/casedetails.php");
                             startActivity(i);break;
                     }
                         break;
 
                     case 1: switch(childPosition){
-                        case 0: i.putExtra("key","http://10.86.0.101/simar/hddetails.php");
+                        case 0: i.putExtra("key","http://10.86.1.190/hddetails.php");
                             startActivity(i);break;
-                        case 1: i.putExtra("key","http://10.86.0.101/simar/pddetails.php");
+                        case 1: i.putExtra("key","http://10.86.1.190/pddetails.php");
                             startActivity(i);break;
-                        case 2: i.putExtra("key","http://10.86.0.101/simar/printerdetails.php");
+                        case 2: i.putExtra("key","http://10.86.1.190/printerdetails.php");
                             startActivity(i);break;
                     }
                         break;
 
                     case 2: switch(childPosition){
-                        case 0: i.putExtra("key","http://10.86.0.101/simar/acdetails.php");
+                        case 0: i.putExtra("key","http://10.86.1.190/acdetails.php");
                             startActivity(i);break;
-                        case 1: i.putExtra("key","http://10.86.0.101/simar/rgdetails.php");
+                        case 1: i.putExtra("key","http://10.86.1.190/rgdetails.php");
                             startActivity(i);break;
                     }
                         break;

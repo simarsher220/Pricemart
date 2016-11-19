@@ -27,8 +27,7 @@
         <activity android:name=".Lifestyle1" />
         <activity android:name=".Electronics" />
         <activity android:name=".DisplayMenShoe" />
-        <activity
-            android:name=".Login">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +36,7 @@
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".ProductBuy" />
-        <activity android:name=".BankActivity"></activity>
+        <activity android:name=".BankActivity" />
     </application>
 
 </manifest>
